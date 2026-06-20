@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QRcraft — Android App by ProjectW</title>
+  <meta name="description" content="QRcraft is a ProjectW Android QR scanner and QR generator with barcode scanning, safe URL previews, QR customization, scan history, and PNG SVG PDF export." />
+  <meta name="keywords" content="QRcraft, ProjectW, QR scanner Android, QR generator Android, barcode scanner, WiFi QR generator, safe URL scanner, custom QR code maker, QR export PNG SVG PDF" />
+  <meta name="theme-color" content="#050713" />
+  <meta property="og:title" content="QRcraft — ProjectW" />
+  <meta property="og:description" content="A modern Android QR and barcode scanner built for instant CameraX scanning, safe result previews, beautiful QR generation, history, and export-ready assets." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QRcraft — Android App by ProjectW" />
+  <meta name="twitter:description" content="QRcraft is a ProjectW Android QR scanner and QR generator with barcode scanning, safe URL previews, QR customization, scan history, and PNG SVG PDF export." />
+  <meta name="twitter:image" content="assets/og-image.svg" />
+  <link rel="canonical" href="https://theprojectw.github.io/qrcraft.html" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" href="assets/projectw-logo.svg" type="image/svg+xml" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "ProjectW",
+      "email": "wetheprojectw@gmail.com",
+      "logo": "/assets/projectw-logo.svg"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "QRcraft",
+      "operatingSystem": "Android 7.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "author": {
+        "@type": "Organization",
+        "name": "ProjectW"
+      },
+      "image": "assets/qrcraft-logo.svg",
+      "description": "QRcraft is a ProjectW Android QR scanner and QR generator with barcode scanning, safe URL previews, QR customization, scan history, and PNG SVG PDF export.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "QRcraft",
+          "item": "/qrcraft.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script>(()=>{const saved=localStorage.getItem('projectw-theme');const systemLight=matchMedia('(prefers-color-scheme: light)').matches;document.documentElement.dataset.theme=saved||(systemLight?'light':'dark');})();</script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body style="--app-accent:#7c5cff">
+  <div class="loader"><div class="loader-inner"><img src="assets/projectw-logo.svg" alt="ProjectW" /><div class="loader-line"><span></span></div><p>loading QRcraft</p></div></div>
+  <canvas id="mesh" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div><div class="cursor" aria-hidden="true"></div>
+  <header class="header">
+    <a href="index.html#top" class="brand brand-split" aria-label="ProjectW home"><img class="brand-icon" src="assets/projectw-logo.svg" alt="" /><img class="brand-word" src="assets/projectw-wordmark.svg" alt="ProjectW" /></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html#top">HOME</a>
+      <div class="nav-dropdown">
+        <a class="nav-drop-trigger" href="index.html#apps" aria-haspopup="true" aria-expanded="false">OUR APPS <span class="drop-mark" aria-hidden="true"><i></i></span></a>
+        <div class="nav-menu" role="menu" aria-label="ProjectW apps">
+          <a role="menuitem" href="chargeguard.html"><img src="assets/chargeguard-logo.svg" alt="" /><b>ChargeGuard</b><small>Battery intelligence</small></a>
+          <a role="menuitem" href="qrcraft.html"><img src="assets/qrcraft-logo.svg" alt="" /><b>QRcraft</b><small>Scan / Generate</small></a>
+          <a role="menuitem" href="relayotp.html"><img src="assets/relayotp-logo.svg" alt="" /><b>RelayOTP</b><small>Encrypted OTP relay</small></a>
+        </div>
+      </div>
+      <a href="about.html">ABOUT</a>
+      <a href="index.html#contact">CONTACT US</a>
+    </nav>
+    <div class="header-actions"><button class="theme-toggle magnetic" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-orb"></span><span class="theme-text">Dark</span></button><a class="pill-cta magnetic" href="mailto:wetheprojectw@gmail.com?subject=Donate%20to%20ProjectW">SUPPORT US</a></div>
+    <button class="menu" aria-label="Toggle menu"><i></i><i></i></button>
+  </header>
+  <main class="app-detail-main" id="top">
+    <section class="detail-hero">
+      <div>
+        <span class="detail-badge">Scan. Generate. Connect.</span>
+        <h1 class="detail-title">QRcraft turns QR scanning into a premium creation studio.</h1>
+        <p class="detail-lede">A modern Android QR and barcode scanner built for instant CameraX scanning, safe result previews, beautiful QR generation, history, and export-ready assets.</p>
+        <div class="detail-actions"><a class="btn primary magnetic" href="apks/QRcraft.apk" download>Download APK</a><a class="btn secondary magnetic" href="mailto:wetheprojectw@gmail.com?subject=Request%20APK%20Access">Request APK Link</a><a class="btn secondary magnetic" href="#features">Explore Features</a></div>
+        <div class="metric-strip"><div><b>15+</b><span>QR categories</span></div><div><b>PNG/SVG/PDF</b><span>Export formats</span></div><div><b>Local</b><span>History storage</span></div></div>
+      </div>
+      <div class="detail-visual">
+        <div class="detail-rings"><i></i><i></i><i></i></div>
+        <div class="detail-device depth-card"><img src="assets/qrcraft-logo.svg" alt="QRcraft logo" /></div>
+      </div>
+    </section>
+    <section id="features" class="detail-section">
+      <div class="detail-section-head"><p class="kicker">Feature architecture</p><h2>Built like a product, presented like a premium launch.</h2><p>QRcraft is built with its own feature set, technical workflow, and product story while staying connected to ProjectW.</p></div>
+      <div class="detail-grid"><article class="detail-card depth-card"><b>01</b><h3>Real-Time Scanner</h3><p>Scan QR codes and barcodes instantly with tap-to-focus, pinch zoom, torch controls, and smooth feedback.</p></article><article class="detail-card depth-card"><b>02</b><h3>Gallery / File / PDF</h3><p>Detect codes from images, files, and PDF pages for professional workflows.</p></article><article class="detail-card depth-card"><b>03</b><h3>Smart Actions</h3><p>Automatically identify URLs, phone numbers, email, WiFi, contacts, locations, products, and text.</p></article><article class="detail-card depth-card"><b>04</b><h3>URL Safety Preview</h3><p>Warn against suspicious links, shorteners, non-HTTPS URLs, punycode, IPs, hidden symbols, and risky patterns.</p></article><article class="detail-card depth-card"><b>05</b><h3>QR Generator</h3><p>Create QR codes for text, web, email, phone, SMS, WiFi, vCard, location, WhatsApp, socials, Play Store, UPI, and batch content.</p></article><article class="detail-card depth-card"><b>06</b><h3>Premium Presets</h3><p>Apply polished QR styles, colors, gradients, rounded modules, frames, logos, and export formats.</p></article></div>
+    </section>
+    <section class="detail-section">
+      <div class="flow-panel depth-card">
+        <div><p class="kicker">How it works</p><h2 class="detail-title" style="font-size:clamp(36px,4vw,58px)">A clear technical flow users can trust.</h2><div class="flow-list"><div><b>01</b><span><h3>Scan</h3><p>CameraX and ML Kit scan real-time frames or selected images/files.</p></span></div><div><b>02</b><span><h3>Understand</h3><p>QRcraft classifies the result type and prepares the right actions.</p></span></div><div><b>03</b><span><h3>Create</h3><p>The generator builds custom QR codes with brand presets and logos.</p></span></div><div><b>04</b><span><h3>Export</h3><p>Users save or share PNG, SVG, and PDF assets for print, web, or business use.</p></span></div></div></div>
+        <div class="holo-graphic"><img src="assets/qrcraft-logo.svg" alt="QRcraft visual" /></div>
+      </div>
+    </section>
+    <section class="detail-section">
+      <div class="detail-section-head"><p class="kicker">Stack & capabilities</p><h2>Keywords, architecture, and product signals.</h2></div>
+      <div class="tag-cloud"><span>CameraX</span><span>ML Kit</span><span>ZXing</span><span>Room</span><span>DataStore</span><span>QR generator</span><span>Barcode scanner</span><span>URL safety</span><span>Bulk scan</span></div>
+    </section>
+    <section class="detail-section">
+      <div class="detail-section-head"><p class="kicker">FAQ</p><h2>Important answers without killing the premium feel.</h2></div>
+      <div class="detail-faq"><details><summary>Can QRcraft scan PDFs?</summary><p>Yes. The product architecture includes QR detection from PDF pages and file sources.</p></details><details><summary>Does it support QR design?</summary><p>Yes. QRcraft includes presets, colors, gradients, logos, frames, and export tools.</p></details><details><summary>Is history local?</summary><p>The app is designed with local scan and generated QR history on the device.</p></details></div>
+    </section>
+    <section class="detail-section">
+      <div class="detail-section-head"><p class="kicker">ProjectW ecosystem</p><h2>Explore the other apps.</h2></div>
+      <div class="detail-next"><a href="chargeguard.html"><img src="assets/chargeguard-logo.svg" alt="ChargeGuard" /><span><b>ChargeGuard</b><small>Smart fast-charging protection</small></span></a><a href="relayotp.html"><img src="assets/relayotp-logo.svg" alt="RelayOTP" /><span><b>RelayOTP</b><small>Secure SMS OTP relay</small></span></a><a href="index.html#apps"><img src="assets/projectw-logo.svg" alt="ProjectW" /><span><b>Back to suite</b><small>Full ProjectW website</small></span></a></div>
+    </section>
+  </main>
+  
+  <div class="float-contact" aria-live="polite">
+    <button class="float-trigger support-bubble" type="button" aria-expanded="false" aria-label="Open ProjectW support form">
+      <span class="wave-hand" aria-hidden="true">👋</span>
+      <img src="assets/support-icon.svg" alt="" />
+    </button>
+    <div class="float-panel" role="dialog" aria-label="Contact ProjectW">
+      <div class="float-head"><span><b>Contact ProjectW</b><small>Usually replies by email</small></span><button class="float-close" type="button" aria-label="Close contact form">×</button></div>
+      <form class="float-form">
+        <label>Name<input name="name" type="text" placeholder="Your name" required></label>
+        <label>Email<input name="email" type="email" placeholder="you@example.com" required></label>
+        <label>Message<textarea name="message" rows="4" placeholder="Tell us what you need..." required></textarea></label>
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer"><span>© <b id="year"></b> ProjectW. Developed by <a class="dev-link" href="mailto:wetheprojectw@gmail.com?subject=Contact%20Waqas%20from%20ProjectW%20Website">Waqas</a>.</span><span class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="index.html#top">Back home</a></span></footer>
+  <script src="vendor/gsap.min.js"></script><script src="vendor/ScrollTrigger.min.js"></script><script src="detail-motion.js"></script>
+<script src="contact-widget.js"></script></body>
+</html>

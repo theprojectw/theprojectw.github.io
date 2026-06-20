@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RelayOTP — Android App by ProjectW</title>
+  <meta name="description" content="RelayOTP is a ProjectW Android secure OTP relay app for your own paired phones, using QR pairing, AES-256-GCM payload encryption, RSA-2048 key exchange, and real-time delivery." />
+  <meta name="keywords" content="RelayOTP, ProjectW, OTP relay app, secure SMS relay, two phone OTP, encrypted OTP forwarding, banking OTP relay, AES-256 OTP, RSA-2048 pairing" />
+  <meta name="theme-color" content="#050713" />
+  <meta property="og:title" content="RelayOTP — ProjectW" />
+  <meta property="og:description" content="A two-device Android workflow for users who keep a SIM in one phone and banking apps on another — pairing devices with QR and relaying OTPs with encryption." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RelayOTP — Android App by ProjectW" />
+  <meta name="twitter:description" content="RelayOTP is a ProjectW Android secure OTP relay app for your own paired phones, using QR pairing, AES-256-GCM payload encryption, RSA-2048 key exchange, and real-time delivery." />
+  <meta name="twitter:image" content="assets/og-image.svg" />
+  <link rel="canonical" href="https://theprojectw.github.io/relayotp.html" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" href="assets/projectw-logo.svg" type="image/svg+xml" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "ProjectW",
+      "email": "wetheprojectw@gmail.com",
+      "logo": "/assets/projectw-logo.svg"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "RelayOTP",
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "author": {
+        "@type": "Organization",
+        "name": "ProjectW"
+      },
+      "image": "assets/relayotp-logo.svg",
+      "description": "RelayOTP is a ProjectW Android secure OTP relay app for your own paired phones, using QR pairing, AES-256-GCM payload encryption, RSA-2048 key exchange, and real-time delivery.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "RelayOTP",
+          "item": "/relayotp.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script>(()=>{const saved=localStorage.getItem('projectw-theme');const systemLight=matchMedia('(prefers-color-scheme: light)').matches;document.documentElement.dataset.theme=saved||(systemLight?'light':'dark');})();</script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body style="--app-accent:#438afe">
+  <div class="loader"><div class="loader-inner"><img src="assets/projectw-logo.svg" alt="ProjectW" /><div class="loader-line"><span></span></div><p>loading RelayOTP</p></div></div>
+  <canvas id="mesh" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div><div class="cursor" aria-hidden="true"></div>
+  <header class="header">
+    <a href="index.html#top" class="brand brand-split" aria-label="ProjectW home"><img class="brand-icon" src="assets/projectw-logo.svg" alt="" /><img class="brand-word" src="assets/projectw-wordmark.svg" alt="ProjectW" /></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html#top">HOME</a>
+      <div class="nav-dropdown">
+        <a class="nav-drop-trigger" href="index.html#apps" aria-haspopup="true" aria-expanded="false">OUR APPS <span class="drop-mark" aria-hidden="true"><i></i></span></a>
+        <div class="nav-menu" role="menu" aria-label="ProjectW apps">
+          <a role="menuitem" href="chargeguard.html"><img src="assets/chargeguard-logo.svg" alt="" /><b>ChargeGuard</b><small>Battery intelligence</small></a>
+          <a role="menuitem" href="qrcraft.html"><img src="assets/qrcraft-logo.svg" alt="" /><b>QRcraft</b><small>Scan / Generate</small></a>
+          <a role="menuitem" href="relayotp.html"><img src="assets/relayotp-logo.svg" alt="" /><b>RelayOTP</b><small>Encrypted OTP relay</small></a>
+        </div>
+      </div>
+      <a href="about.html">ABOUT</a>
+      <a href="index.html#contact">CONTACT US</a>
+    </nav>
+    <div class="header-actions"><button class="theme-toggle magnetic" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-orb"></span><span class="theme-text">Dark</span></button><a class="pill-cta magnetic" href="mailto:wetheprojectw@gmail.com?subject=Donate%20to%20ProjectW">SUPPORT US</a></div>
+    <button class="menu" aria-label="Toggle menu"><i></i><i></i></button>
+  </header>
+  <main class="app-detail-main" id="top">
+    <section class="detail-hero">
+      <div>
+        <span class="detail-badge">Secure SMS OTP relay</span>
+        <h1 class="detail-title">RelayOTP securely bridges OTP codes between your own phones.</h1>
+        <p class="detail-lede">A two-device Android workflow for users who keep a SIM in one phone and banking apps on another — pairing devices with QR and relaying OTPs with encryption.</p>
+        <div class="detail-actions"><a class="btn primary magnetic" href="apks/RelayOTP.apk" download>Download APK</a><a class="btn secondary magnetic" href="mailto:wetheprojectw@gmail.com?subject=Request%20APK%20Access">Request APK Link</a><a class="btn secondary magnetic" href="#features">Explore Features</a></div>
+        <div class="metric-strip"><div><b>AES-256</b><span>Payload encryption</span></div><div><b>RSA-2048</b><span>Key exchange</span></div><div><b>30 sec</b><span>Server cleanup</span></div></div>
+      </div>
+      <div class="detail-visual">
+        <div class="detail-rings"><i></i><i></i><i></i></div>
+        <div class="detail-device depth-card"><img src="assets/relayotp-logo.svg" alt="RelayOTP logo" /></div>
+      </div>
+    </section>
+    <section id="features" class="detail-section">
+      <div class="detail-section-head"><p class="kicker">Feature architecture</p><h2>Built like a product, presented like a premium launch.</h2><p>RelayOTP is built with its own feature set, technical workflow, and product story while staying connected to ProjectW.</p></div>
+      <div class="detail-grid"><article class="detail-card depth-card"><b>01</b><h3>Instant OTP Relay</h3><p>Capture SMS OTP codes on the SIM phone and relay them to the paired receiver phone in real time.</p></article><article class="detail-card depth-card"><b>02</b><h3>End-to-End Encryption</h3><p>Encrypt OTP payloads with AES-256-GCM and exchange keys through RSA-2048 pairing.</p></article><article class="detail-card depth-card"><b>03</b><h3>QR Pairing</h3><p>Pair two phones securely by scanning a QR code with no typing or manual key sharing.</p></article><article class="detail-card depth-card"><b>04</b><h3>Auto-Fill Mode</h3><p>Assist supported banking apps by filling OTP fields using Android Accessibility workflows.</p></article><article class="detail-card depth-card"><b>05</b><h3>Inbox Detection Mode</h3><p>For apps that read SMS inboxes, RelayOTP can place the OTP where the banking app can detect it.</p></article><article class="detail-card depth-card"><b>06</b><h3>Foreground Reliability</h3><p>Battery optimization guidance and foreground service patterns keep the listener reliable in the background.</p></article></div>
+    </section>
+    <section class="detail-section">
+      <div class="flow-panel depth-card">
+        <div><p class="kicker">How it works</p><h2 class="detail-title" style="font-size:clamp(36px,4vw,58px)">A clear technical flow users can trust.</h2><div class="flow-list"><div><b>01</b><span><h3>Sender phone</h3><p>The phone with the SIM listens for incoming OTP messages.</p></span></div><div><b>02</b><span><h3>Pair devices</h3><p>The receiver phone scans a QR code and exchanges public keys.</p></span></div><div><b>03</b><span><h3>Encrypt relay</h3><p>The sender encrypts OTP data before transport through Firebase over TLS.</p></span></div><div><b>04</b><span><h3>Receive OTP</h3><p>The receiver decrypts and presents the OTP through overlay, inbox, or assisted entry.</p></span></div></div></div>
+        <div class="holo-graphic"><img src="assets/relayotp-logo.svg" alt="RelayOTP visual" /></div>
+      </div>
+    </section>
+    <section class="detail-section">
+      <div class="detail-section-head"><p class="kicker">Stack & capabilities</p><h2>Keywords, architecture, and product signals.</h2></div>
+      <div class="tag-cloud"><span>AES-256-GCM</span><span>RSA-2048</span><span>Firebase</span><span>QR pairing</span><span>Accessibility</span><span>Foreground service</span><span>SMS workflow</span><span>Pakistan banking</span></div>
+    </section>
+    <section class="detail-section">
+      <div class="detail-section-head"><p class="kicker">FAQ</p><h2>Important answers without killing the premium feel.</h2></div>
+      <div class="detail-faq"><details><summary>Is my OTP readable by servers?</summary><p>The product is designed so OTPs are encrypted before leaving the sender phone and only the paired receiver can decrypt them.</p></details><details><summary>Who is this for?</summary><p>Users managing their own two-phone workflow where the SIM and banking apps are on separate devices.</p></details><details><summary>Does it need internet?</summary><p>Yes, both paired phones need internet for real-time relay transport.</p></details></div>
+    </section>
+
+    <section class="detail-section relay-legal-section">
+      <div class="detail-section-head"><p class="kicker">Privacy & Responsible Use</p><h2>RelayOTP Privacy & Responsible Use</h2><p>RelayOTP is designed only for your own paired devices, your own SIM, and your own accounts. The app must not be used to access, forward, intercept, or control OTPs that do not belong to you.</p></div>
+      <div class="detail-grid">
+        <article class="detail-card depth-card"><b>01</b><h3>Your own devices only</h3><p>Use RelayOTP only between phones you own or are fully authorized to manage. Do not pair unknown, shared, stolen, or unauthorized devices.</p></article>
+        <article class="detail-card depth-card"><b>02</b><h3>Encrypted relay design</h3><p>RelayOTP is designed around QR pairing, AES-256-GCM payload encryption, RSA-2048 key exchange, and short OTP retention for sensitive workflows.</p></article>
+        <article class="detail-card depth-card"><b>03</b><h3>No misuse responsibility</h3><p>ProjectW will not be responsible for misuse, unauthorized OTP forwarding, account loss, banking issues, fraud, policy violations, or illegal activity caused by user behavior.</p></article>
+      </div>
+    </section>
+    <section class="detail-section">
+      <div class="detail-section-head"><p class="kicker">ProjectW ecosystem</p><h2>Explore the other apps.</h2></div>
+      <div class="detail-next"><a href="chargeguard.html"><img src="assets/chargeguard-logo.svg" alt="ChargeGuard" /><span><b>ChargeGuard</b><small>Smart fast-charging protection</small></span></a><a href="qrcraft.html"><img src="assets/qrcraft-logo.svg" alt="QRcraft" /><span><b>QRcraft</b><small>Scan. Generate. Connect.</small></span></a><a href="index.html#apps"><img src="assets/projectw-logo.svg" alt="ProjectW" /><span><b>Back to suite</b><small>Full ProjectW website</small></span></a></div>
+    </section>
+  </main>
+  
+  <div class="float-contact" aria-live="polite">
+    <button class="float-trigger support-bubble" type="button" aria-expanded="false" aria-label="Open ProjectW support form">
+      <span class="wave-hand" aria-hidden="true">👋</span>
+      <img src="assets/support-icon.svg" alt="" />
+    </button>
+    <div class="float-panel" role="dialog" aria-label="Contact ProjectW">
+      <div class="float-head"><span><b>Contact ProjectW</b><small>Usually replies by email</small></span><button class="float-close" type="button" aria-label="Close contact form">×</button></div>
+      <form class="float-form">
+        <label>Name<input name="name" type="text" placeholder="Your name" required></label>
+        <label>Email<input name="email" type="email" placeholder="you@example.com" required></label>
+        <label>Message<textarea name="message" rows="4" placeholder="Tell us what you need..." required></textarea></label>
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer"><span>© <b id="year"></b> ProjectW. Developed by <a class="dev-link" href="mailto:wetheprojectw@gmail.com?subject=Contact%20Waqas%20from%20ProjectW%20Website">Waqas</a>.</span><span class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="index.html#top">Back home</a></span></footer>
+  <script src="vendor/gsap.min.js"></script><script src="vendor/ScrollTrigger.min.js"></script><script src="detail-motion.js"></script>
+<script src="contact-widget.js"></script></body>
+</html>

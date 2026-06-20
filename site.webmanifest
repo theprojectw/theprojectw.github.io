@@ -1,0 +1,18 @@
+{
+  "name": "ProjectW",
+  "short_name": "ProjectW",
+  "description": "ProjectW \u2014 Android utilities including ChargeGuard, QRcraft, and RelayOTP.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050713",
+  "theme_color": "#050713",
+  "icons": [
+    {
+      "src": "assets/projectw-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "scope": "/"
+}
