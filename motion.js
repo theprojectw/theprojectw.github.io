@@ -65,7 +65,7 @@
   function resize(){
     dpr=Math.min(devicePixelRatio||1,2); w=canvas.width=innerWidth*dpr; h=canvas.height=innerHeight*dpr;
     canvas.style.width=innerWidth+'px'; canvas.style.height=innerHeight+'px';
-    const gap = Math.max(110, innerWidth/10)*dpr; points=[];
+    const gap = Math.max(86, innerWidth/14)*dpr; points=[];
     for(let y=-gap;y<h+gap;y+=gap){for(let x=-gap;x<w+gap;x+=gap){points.push({x,y,ox:x,oy:y,phase:Math.random()*Math.PI*2});}}
   }
   function draw(t=0){
@@ -83,7 +83,7 @@
       const p=points[i];
       for(let j=i+1;j<points.length;j++){
         const q=points[j], dx=p.x-q.x, dy=p.y-q.y, dist=Math.hypot(dx,dy);
-        if(dist<125*dpr){ctx.strokeStyle=lightMode ? `rgba(15,23,42,${(1-dist/(125*dpr))*0.055})` : `rgba(56,189,248,${(1-dist/(125*dpr))*0.075})`;ctx.lineWidth=.75*dpr;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();}
+        if(dist<150*dpr){ctx.strokeStyle=lightMode ? `rgba(15,23,42,${(1-dist/(150*dpr))*0.075})` : `rgba(56,189,248,${(1-dist/(150*dpr))*0.105})`;ctx.lineWidth=.75*dpr;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();}
       }
       const md=Math.hypot(p.x-mouse.x*dpr,p.y-mouse.y*dpr);
       ctx.fillStyle=md<220*dpr ? (lightMode?'rgba(59,130,246,.35)':'rgba(0,239,134,.42)') : (lightMode?'rgba(15,23,42,.16)':'rgba(255,255,255,.18)');
@@ -139,67 +139,33 @@
     gsap.from(el,{scrollTrigger:{trigger:el,start:'top 84%'},y:28,opacity:0,duration:.85});
   });
 
-  // ProjectW constellation — smoother, earlier reveals, desktop pin only.
+  // Ecosystem pinned motion graphics.
   gsap.set('.map-line',{strokeDasharray:(i,el)=>el.getTotalLength(),strokeDashoffset:(i,el)=>el.getTotalLength()});
-  gsap.set('.eco-card',{transformOrigin:'center center',willChange:'transform,opacity'});
-  gsap.fromTo('.eco-card',
-    {autoAlpha:0, y:30, scale:.88, rotationY:-10},
-    {autoAlpha:1, y:0, scale:1, rotationY:0, duration:.72, stagger:.10, ease:'power3.out',
-      scrollTrigger:{trigger:'.ecosystem',start:'top 72%',once:true}}
-  );
-  const ecosystemMM = gsap.matchMedia();
-  ecosystemMM.add('(min-width: 981px)',()=>{
-    const eco = gsap.timeline({
-      scrollTrigger:{
-        trigger:'.ecosystem',
-        start:'top top',
-        end:'+=1450',
-        scrub:.65,
-        pin:true,
-        anticipatePin:1,
-        invalidateOnRefresh:true,
-        fastScrollEnd:true
-      }
-    });
-    eco.from('.ecosystem .section-copy',{x:-46,opacity:0,duration:.55},0)
-       .to('.map-line',{strokeDashoffset:0,stagger:.08,duration:1.05,ease:'none'},.05)
-       .from('.pulse-dot',{scale:0,opacity:0,transformOrigin:'center',stagger:.06,duration:.35},.12)
-       .to('.eco-card',{y:-6,stagger:.04,duration:.55,ease:'none'},.20)
-       .to('.orbit-stage',{rotationX:6,rotationY:-7,scale:1.025,duration:1.15,ease:'none'},.48)
-       .to('.eco-main',{scale:1.10,boxShadow:'0 34px 100px rgba(34,211,238,.22)',duration:.72,ease:'none'},.62)
-       .to('.eco-one',{x:16,y:-16,duration:.72,ease:'none'},.78)
-       .to('.eco-two',{y:20,duration:.72,ease:'none'},.78)
-       .to('.eco-three',{x:-16,y:-16,duration:.72,ease:'none'},.78);
-  });
-  ecosystemMM.add('(max-width: 980px)',()=>{
-    gsap.set('.map-line',{strokeDashoffset:0});
-    gsap.from('.eco-card',{scrollTrigger:{trigger:'.orbit-stage',start:'top 78%',once:true},scale:.86,opacity:0,y:28,stagger:.08,duration:.55,ease:'power3.out'});
-    gsap.from('.ecosystem .section-copy',{scrollTrigger:{trigger:'.ecosystem',start:'top 82%',once:true},y:24,opacity:0,duration:.55});
-  });
-  gsap.to('.pulse-dot',{scale:1.55,opacity:.28,transformOrigin:'center',duration:1.25,repeat:-1,yoyo:true,stagger:.18,ease:'sine.inOut'});
+  const eco = gsap.timeline({scrollTrigger:{trigger:'.ecosystem',start:'top top',end:'+=1800',scrub:1,pin:'.pin-wrap'}});
+  eco.from('.ecosystem .section-copy',{x:-80,opacity:0,duration:1})
+     .to('.map-line',{strokeDashoffset:0,stagger:.15,duration:2},.15)
+     .from('.pulse-dot',{scale:0,transformOrigin:'center',stagger:.1,duration:.7},.6)
+     .from('.eco-card',{scale:.35,opacity:0,y:80,rotationY:-35,stagger:.12,duration:1,ease:'back.out(1.7)'},.75)
+     .to('.orbit-stage',{rotationX:8,rotationY:-10,scale:1.04,duration:2},1.1)
+     .to('.eco-main',{scale:1.18,boxShadow:'0 40px 120px rgba(34,211,238,.25)',duration:1},1.4)
+     .to('.eco-one',{x:22,y:-22,duration:1},1.7)
+     .to('.eco-two',{y:28,duration:1},1.7)
+     .to('.eco-three',{x:-22,y:-22,duration:1},1.7);
+  gsap.to('.pulse-dot',{scale:1.7,opacity:.25,transformOrigin:'center',duration:1.2,repeat:-1,yoyo:true,stagger:.18,ease:'sine.inOut'});
 
-  // Company overview phones — pinned on desktop, natural reveal on mobile.
-  const cinemaMM = gsap.matchMedia();
-  cinemaMM.add('(min-width: 981px)',()=>{
-    const cinema = gsap.timeline({scrollTrigger:{trigger:'.cinema',start:'top top',end:'+=2000',scrub:1,pin:true,anticipatePin:1,invalidateOnRefresh:true}});
-    cinema.from('.cinema-copy',{y:80,opacity:0,duration:1})
-          .from('.phone-b',{y:420,scale:.76,rotationX:30,opacity:0,duration:1.3,ease:'expo.out'},.25)
-          .from('.phone-a',{x:-420,y:210,rotationZ:-22,opacity:0,duration:1.2},.55)
-          .from('.phone-c',{x:420,y:210,rotationZ:22,opacity:0,duration:1.2},.55)
-          .to('.cinema-copy',{y:-70,opacity:.2,duration:1},1.6)
-          .to('.phone-a',{x:160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
-          .to('.phone-b',{y:70,scale:.9,opacity:.72,duration:1.2},1.5)
-          .to('.phone-c',{x:-160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
-          .to('.phone-a',{x:-70,y:20,scale:.9,opacity:.6,duration:1},2.8)
-          .to('.phone-b',{y:-8,scale:1.14,opacity:1,duration:1},2.8)
-          .to('.phone-c',{x:70,y:20,scale:.9,opacity:.6,duration:1},2.8);
-  });
-  cinemaMM.add('(max-width: 980px)',()=>{
-    gsap.set('.cinema,.cinema-stage,.phone-a,.phone-b,.phone-c',{clearProps:'all'});
-    gsap.set('.phone',{opacity:1,x:0,y:0,scale:1,rotation:0,rotationX:0,rotationY:0});
-    gsap.from('.cinema-copy',{scrollTrigger:{trigger:'.cinema',start:'top 84%',once:true},y:24,opacity:0,duration:.55});
-    gsap.from('.phone',{scrollTrigger:{trigger:'.cinema-stage',start:'top 82%',once:true},y:28,opacity:0,stagger:.1,duration:.6,ease:'power3.out'});
-  });
+  // Cinema pinned app phones.
+  const cinema = gsap.timeline({scrollTrigger:{trigger:'.cinema',start:'top top',end:'+=2000',scrub:1,pin:true}});
+  cinema.from('.cinema-copy',{y:80,opacity:0,duration:1})
+        .from('.phone-b',{y:420,scale:.76,rotationX:30,opacity:0,duration:1.3,ease:'expo.out'},.25)
+        .from('.phone-a',{x:-420,y:210,rotationZ:-22,opacity:0,duration:1.2},.55)
+        .from('.phone-c',{x:420,y:210,rotationZ:22,opacity:0,duration:1.2},.55)
+        .to('.cinema-copy',{y:-70,opacity:.2,duration:1},1.6)
+        .to('.phone-a',{x:160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
+        .to('.phone-b',{y:70,scale:.9,opacity:.72,duration:1.2},1.5)
+        .to('.phone-c',{x:-160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
+        .to('.phone-a',{x:-70,y:20,scale:.9,opacity:.6,duration:1},2.8)
+        .to('.phone-b',{y:-8,scale:1.14,opacity:1,duration:1},2.8)
+        .to('.phone-c',{x:70,y:20,scale:.9,opacity:.6,duration:1},2.8);
   gsap.to('.otp-token',{textShadow:'0 0 30px rgba(59,130,246,.85)',duration:.9,repeat:-1,yoyo:true,ease:'sine.inOut'});
 
   // Horizontal product scroll only desktop/tablet.
@@ -237,4 +203,5 @@
     el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();gsap.to(el,{x:(e.clientX-r.left-r.width/2)*.22,y:(e.clientY-r.top-r.height/2)*.22,duration:.25});});
     el.addEventListener('pointerleave',()=>gsap.to(el,{x:0,y:0,duration:.5,ease:'elastic.out(1,.45)'}));
   });
+  window.addEventListener('load',()=>{ if(window.ScrollTrigger) ScrollTrigger.refresh(); }, {once:true});
 })();
