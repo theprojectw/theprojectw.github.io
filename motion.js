@@ -140,33 +140,62 @@
     gsap.from(el,{scrollTrigger:{trigger:el,start:'top 84%'},y:28,opacity:0,duration:.85});
   });
 
-  // Ecosystem pinned motion graphics.
+  // ProjectW constellation — smoother, earlier reveals, desktop pin only.
   gsap.set('.map-line',{strokeDasharray:(i,el)=>el.getTotalLength(),strokeDashoffset:(i,el)=>el.getTotalLength()});
-  const eco = gsap.timeline({scrollTrigger:{trigger:'.ecosystem',start:'top top',end:'+=1800',scrub:1,pin:'.pin-wrap'}});
-  eco.from('.ecosystem .section-copy',{x:-80,opacity:0,duration:1})
-     .to('.map-line',{strokeDashoffset:0,stagger:.15,duration:2},.15)
-     .from('.pulse-dot',{scale:0,transformOrigin:'center',stagger:.1,duration:.7},.6)
-     .from('.eco-card',{scale:.35,opacity:0,y:80,rotationY:-35,stagger:.12,duration:1,ease:'back.out(1.7)'},.75)
-     .to('.orbit-stage',{rotationX:8,rotationY:-10,scale:1.04,duration:2},1.1)
-     .to('.eco-main',{scale:1.18,boxShadow:'0 40px 120px rgba(34,211,238,.25)',duration:1},1.4)
-     .to('.eco-one',{x:22,y:-22,duration:1},1.7)
-     .to('.eco-two',{y:28,duration:1},1.7)
-     .to('.eco-three',{x:-22,y:-22,duration:1},1.7);
-  gsap.to('.pulse-dot',{scale:1.7,opacity:.25,transformOrigin:'center',duration:1.2,repeat:-1,yoyo:true,stagger:.18,ease:'sine.inOut'});
+  gsap.set('.eco-card',{transformOrigin:'center center',willChange:'transform,opacity'});
+  const ecosystemMM = gsap.matchMedia();
+  ecosystemMM.add('(min-width: 981px)',()=>{
+    const eco = gsap.timeline({
+      scrollTrigger:{
+        trigger:'.ecosystem',
+        start:'top top',
+        end:'+=1450',
+        scrub:.65,
+        pin:true,
+        anticipatePin:1,
+        invalidateOnRefresh:true,
+        fastScrollEnd:true
+      }
+    });
+    eco.from('.ecosystem .section-copy',{x:-46,opacity:0,duration:.55},0)
+       .to('.map-line',{strokeDashoffset:0,stagger:.08,duration:1.05,ease:'none'},.05)
+       .from('.pulse-dot',{scale:0,opacity:0,transformOrigin:'center',stagger:.06,duration:.35},.12)
+       .from('.eco-card',{scale:.72,opacity:0,y:34,rotationY:-12,stagger:.08,duration:.62,ease:'power3.out'},.18)
+       .to('.orbit-stage',{rotationX:6,rotationY:-7,scale:1.025,duration:1.15,ease:'none'},.48)
+       .to('.eco-main',{scale:1.10,boxShadow:'0 34px 100px rgba(34,211,238,.22)',duration:.72,ease:'none'},.62)
+       .to('.eco-one',{x:16,y:-16,duration:.72,ease:'none'},.78)
+       .to('.eco-two',{y:20,duration:.72,ease:'none'},.78)
+       .to('.eco-three',{x:-16,y:-16,duration:.72,ease:'none'},.78);
+  });
+  ecosystemMM.add('(max-width: 980px)',()=>{
+    gsap.set('.map-line',{strokeDashoffset:0});
+    gsap.from('.eco-card',{scrollTrigger:{trigger:'.orbit-stage',start:'top 78%',once:true},scale:.86,opacity:0,y:28,stagger:.08,duration:.55,ease:'power3.out'});
+    gsap.from('.ecosystem .section-copy',{scrollTrigger:{trigger:'.ecosystem',start:'top 82%',once:true},y:24,opacity:0,duration:.55});
+  });
+  gsap.to('.pulse-dot',{scale:1.55,opacity:.28,transformOrigin:'center',duration:1.25,repeat:-1,yoyo:true,stagger:.18,ease:'sine.inOut'});
 
-  // Cinema pinned app phones.
-  const cinema = gsap.timeline({scrollTrigger:{trigger:'.cinema',start:'top top',end:'+=2000',scrub:1,pin:true}});
-  cinema.from('.cinema-copy',{y:80,opacity:0,duration:1})
-        .from('.phone-b',{y:420,scale:.76,rotationX:30,opacity:0,duration:1.3,ease:'expo.out'},.25)
-        .from('.phone-a',{x:-420,y:210,rotationZ:-22,opacity:0,duration:1.2},.55)
-        .from('.phone-c',{x:420,y:210,rotationZ:22,opacity:0,duration:1.2},.55)
-        .to('.cinema-copy',{y:-70,opacity:.2,duration:1},1.6)
-        .to('.phone-a',{x:160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
-        .to('.phone-b',{y:70,scale:.9,opacity:.72,duration:1.2},1.5)
-        .to('.phone-c',{x:-160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
-        .to('.phone-a',{x:-70,y:20,scale:.9,opacity:.6,duration:1},2.8)
-        .to('.phone-b',{y:-8,scale:1.14,opacity:1,duration:1},2.8)
-        .to('.phone-c',{x:70,y:20,scale:.9,opacity:.6,duration:1},2.8);
+  // Company overview phones — pinned on desktop, natural reveal on mobile.
+  const cinemaMM = gsap.matchMedia();
+  cinemaMM.add('(min-width: 981px)',()=>{
+    const cinema = gsap.timeline({scrollTrigger:{trigger:'.cinema',start:'top top',end:'+=2000',scrub:1,pin:true,anticipatePin:1,invalidateOnRefresh:true}});
+    cinema.from('.cinema-copy',{y:80,opacity:0,duration:1})
+          .from('.phone-b',{y:420,scale:.76,rotationX:30,opacity:0,duration:1.3,ease:'expo.out'},.25)
+          .from('.phone-a',{x:-420,y:210,rotationZ:-22,opacity:0,duration:1.2},.55)
+          .from('.phone-c',{x:420,y:210,rotationZ:22,opacity:0,duration:1.2},.55)
+          .to('.cinema-copy',{y:-70,opacity:.2,duration:1},1.6)
+          .to('.phone-a',{x:160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
+          .to('.phone-b',{y:70,scale:.9,opacity:.72,duration:1.2},1.5)
+          .to('.phone-c',{x:-160,rotationY:0,rotationZ:0,scale:1.06,duration:1.2},1.5)
+          .to('.phone-a',{x:-70,y:20,scale:.9,opacity:.6,duration:1},2.8)
+          .to('.phone-b',{y:-8,scale:1.14,opacity:1,duration:1},2.8)
+          .to('.phone-c',{x:70,y:20,scale:.9,opacity:.6,duration:1},2.8);
+  });
+  cinemaMM.add('(max-width: 980px)',()=>{
+    gsap.set('.cinema,.cinema-stage,.phone-a,.phone-b,.phone-c',{clearProps:'all'});
+    gsap.set('.phone',{opacity:1,x:0,y:0,scale:1,rotation:0,rotationX:0,rotationY:0});
+    gsap.from('.cinema-copy',{scrollTrigger:{trigger:'.cinema',start:'top 84%',once:true},y:24,opacity:0,duration:.55});
+    gsap.from('.phone',{scrollTrigger:{trigger:'.cinema-stage',start:'top 82%',once:true},y:28,opacity:0,stagger:.1,duration:.6,ease:'power3.out'});
+  });
   gsap.to('.otp-token',{textShadow:'0 0 30px rgba(59,130,246,.85)',duration:.9,repeat:-1,yoyo:true,ease:'sine.inOut'});
 
   // Horizontal product scroll only desktop/tablet.
