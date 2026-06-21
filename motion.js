@@ -66,7 +66,7 @@
   function resize(){
     dpr=Math.min(devicePixelRatio||1,2); w=canvas.width=innerWidth*dpr; h=canvas.height=innerHeight*dpr;
     canvas.style.width=innerWidth+'px'; canvas.style.height=innerHeight+'px';
-    const gap = Math.max(86, innerWidth/14)*dpr; points=[];
+    const gap = Math.max(110, innerWidth/10)*dpr; points=[];
     for(let y=-gap;y<h+gap;y+=gap){for(let x=-gap;x<w+gap;x+=gap){points.push({x,y,ox:x,oy:y,phase:Math.random()*Math.PI*2});}}
   }
   function draw(t=0){
@@ -84,7 +84,7 @@
       const p=points[i];
       for(let j=i+1;j<points.length;j++){
         const q=points[j], dx=p.x-q.x, dy=p.y-q.y, dist=Math.hypot(dx,dy);
-        if(dist<150*dpr){ctx.strokeStyle=lightMode ? `rgba(15,23,42,${(1-dist/(150*dpr))*0.075})` : `rgba(56,189,248,${(1-dist/(150*dpr))*0.105})`;ctx.lineWidth=.75*dpr;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();}
+        if(dist<125*dpr){ctx.strokeStyle=lightMode ? `rgba(15,23,42,${(1-dist/(125*dpr))*0.055})` : `rgba(56,189,248,${(1-dist/(125*dpr))*0.075})`;ctx.lineWidth=.75*dpr;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();}
       }
       const md=Math.hypot(p.x-mouse.x*dpr,p.y-mouse.y*dpr);
       ctx.fillStyle=md<220*dpr ? (lightMode?'rgba(59,130,246,.35)':'rgba(0,239,134,.42)') : (lightMode?'rgba(15,23,42,.16)':'rgba(255,255,255,.18)');
