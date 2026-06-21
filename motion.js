@@ -14,7 +14,6 @@
       'qrcraft-logo.svg':'qrcraft-logo-light.svg',
       'relayotp-logo.svg':'relayotp-logo-light.svg',
       'projectw-lockup-asset.svg':'projectw-lockup-light.svg',
-      'projectw-nav-lockup.svg':'projectw-nav-lockup-light.svg',
       'projectw-wordmark.svg':'projectw-wordmark-light.svg'
     };
     const reverse = Object.fromEntries(Object.entries(pairs).map(([dark,light])=>[light,dark]));
@@ -143,6 +142,11 @@
   // ProjectW constellation — smoother, earlier reveals, desktop pin only.
   gsap.set('.map-line',{strokeDasharray:(i,el)=>el.getTotalLength(),strokeDashoffset:(i,el)=>el.getTotalLength()});
   gsap.set('.eco-card',{transformOrigin:'center center',willChange:'transform,opacity'});
+  gsap.fromTo('.eco-card',
+    {autoAlpha:0, y:30, scale:.88, rotationY:-10},
+    {autoAlpha:1, y:0, scale:1, rotationY:0, duration:.72, stagger:.10, ease:'power3.out',
+      scrollTrigger:{trigger:'.ecosystem',start:'top 72%',once:true}}
+  );
   const ecosystemMM = gsap.matchMedia();
   ecosystemMM.add('(min-width: 981px)',()=>{
     const eco = gsap.timeline({
@@ -160,7 +164,7 @@
     eco.from('.ecosystem .section-copy',{x:-46,opacity:0,duration:.55},0)
        .to('.map-line',{strokeDashoffset:0,stagger:.08,duration:1.05,ease:'none'},.05)
        .from('.pulse-dot',{scale:0,opacity:0,transformOrigin:'center',stagger:.06,duration:.35},.12)
-       .from('.eco-card',{scale:.72,opacity:0,y:34,rotationY:-12,stagger:.08,duration:.62,ease:'power3.out'},.18)
+       .to('.eco-card',{y:-6,stagger:.04,duration:.55,ease:'none'},.20)
        .to('.orbit-stage',{rotationX:6,rotationY:-7,scale:1.025,duration:1.15,ease:'none'},.48)
        .to('.eco-main',{scale:1.10,boxShadow:'0 34px 100px rgba(34,211,238,.22)',duration:.72,ease:'none'},.62)
        .to('.eco-one',{x:16,y:-16,duration:.72,ease:'none'},.78)

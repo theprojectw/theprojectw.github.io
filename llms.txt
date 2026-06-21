@@ -1,0 +1,17 @@
+# ProjectW
+
+ProjectW is an Android product company building practical utility apps for real-world mobile workflows.
+
+## Website
+
+https://theprojectw.github.io/
+
+## Apps
+
+- ChargeGuard: Android battery protection and charging monitoring.
+- QRcraft: Android QR scanner and QR generator.
+- RelayOTP: Secure OTP relay for your own paired phones.
+
+## Contact
+
+wetheprojectw@gmail.com
