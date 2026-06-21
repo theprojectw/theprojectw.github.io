@@ -45,7 +45,16 @@
   });
 
   $('.menu')?.addEventListener('click',()=>document.body.classList.toggle('menu-open'));
-  $$('.nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+  const navDropTrigger = $('.nav-drop-trigger');
+  navDropTrigger?.addEventListener('click', (e) => {
+    if (window.matchMedia('(max-width: 980px)').matches) {
+      e.preventDefault();
+      const wrap = navDropTrigger.closest('.nav-dropdown');
+      wrap?.classList.toggle('open');
+      navDropTrigger.setAttribute('aria-expanded', String(wrap?.classList.contains('open')));
+    }
+  });
+  $$('.nav a').forEach(a=>a.addEventListener('click',()=>{ if(a.classList.contains('nav-drop-trigger') && window.matchMedia('(max-width: 980px)').matches) return; document.body.classList.remove('menu-open'); }));
 
   // Text splitting without external plugins.
   function splitLines(el){

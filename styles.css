@@ -218,3 +218,330 @@ html[data-theme="light"]{--blue:#1d4ed8;--sky:#2563eb;--cyan:#3b82f6}html[data-t
 @media(max-width:620px){
   .cinema-stage{gap:18px!important}.cinema-stage .phone{width:min(280px,84vw)!important;max-width:280px!important;border-radius:38px!important;padding:18px!important}.cinema-stage .phone img{width:70px!important;height:70px!important}.overview-visual{min-height:195px!important}.overview-phone .mini-phone{transform:scale(.74)!important}.overview-phone .sync-visual{transform:scale(.76)!important}.overview-phone .sync-phone{width:70px!important;height:120px!important}.overview-phone .sync-phone.right em{font-size:11px!important}.otp-token{top:195px!important;font-size:22px!important}.hero-actions,.detail-actions,.app-cta-row,.download-actions,.contact-actions{display:grid!important;grid-template-columns:1fr!important;width:100%!important;gap:12px!important}.hero-actions .btn,.detail-actions .btn,.app-cta-row .btn,.download-actions .btn,.contact-actions .btn{width:100%!important}.problem-solution .section-copy h2{font-size:clamp(30px,9vw,40px)!important;line-height:1.08!important}
 }
+
+/* Mobile dropdown centered alignment */
+@media(max-width:980px){
+  .nav{justify-items:center!important;text-align:center!important}.nav > a,.nav-drop-trigger{justify-content:center!important;text-align:center!important;width:100%!important}.nav-dropdown{width:100%!important;text-align:center!important}.nav-menu{display:grid!important;gap:8px!important;justify-items:stretch!important;text-align:center!important}.nav-menu a{display:grid!important;grid-template-columns:44px minmax(0,180px)!important;justify-content:center!important;align-items:center!important;text-align:left!important;margin:0 auto!important;width:100%!important;max-width:310px!important}.nav-menu img{justify-self:end!important}.nav-menu b,.nav-menu small{text-align:left!important}.drop-mark{margin-left:8px!important}
+}
+@media(max-width:420px){
+  .nav-menu a{grid-template-columns:40px minmax(0,165px)!important;max-width:285px!important;column-gap:10px!important}.nav-menu img{width:40px!important;height:40px!important}.nav-menu b{font-size:12.5px!important}.nav-menu small{font-size:10.5px!important}
+}
+
+/* Mobile nav overflow hard fix */
+@media(max-width:980px){
+  .nav{box-sizing:border-box!important;left:12px!important;right:12px!important;width:calc(100vw - 24px)!important;max-width:calc(100vw - 24px)!important;overflow-x:hidden!important;padding:14px!important}.nav *{box-sizing:border-box!important;max-width:100%!important}.nav-dropdown{width:100%!important;max-width:100%!important;overflow:hidden!important}.nav-drop-trigger{width:100%!important;max-width:100%!important;display:flex!important;justify-content:center!important;align-items:center!important;gap:8px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;padding-left:10px!important;padding-right:10px!important}.nav-drop-trigger .drop-mark{flex:0 0 20px!important;margin-left:4px!important}.nav-menu{width:100%!important;max-width:100%!important;overflow:hidden!important;margin-left:0!important;margin-right:0!important}.nav-menu a{width:100%!important;max-width:100%!important;min-width:0!important;display:grid!important;grid-template-columns:42px minmax(0,1fr)!important;justify-content:stretch!important;margin:0!important;padding:10px 12px!important;column-gap:12px!important}.nav-menu img{justify-self:center!important;flex:0 0 auto!important}.nav-menu b,.nav-menu small{min-width:0!important;max-width:100%!important;overflow:hidden!important}.nav-menu b{white-space:nowrap!important;text-overflow:ellipsis!important}.nav-menu small{white-space:normal!important;line-height:1.2!important}.nav > a{width:100%!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+}
+@media(max-width:360px){.nav{left:8px!important;right:8px!important;width:calc(100vw - 16px)!important;max-width:calc(100vw - 16px)!important;padding:12px!important}.nav-drop-trigger{font-size:11px!important;letter-spacing:.045em!important}.nav-menu a{grid-template-columns:38px minmax(0,1fr)!important;padding:9px!important}.nav-menu img{width:38px!important;height:38px!important}}
+
+/* FINAL mobile dropdown layout: keep OUR APPS and its menu centered inside screen */
+@media(max-width:980px){
+  .menu-open .nav{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:8px!important;
+    left:12px!important;
+    right:12px!important;
+    top:76px!important;
+    width:calc(100vw - 24px)!important;
+    max-width:calc(100vw - 24px)!important;
+    padding:14px!important;
+    overflow-x:hidden!important;
+  }
+  .nav > a,
+  .nav-dropdown,
+  .nav-drop-trigger{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 auto!important;
+  }
+  .nav > a,
+  .nav-drop-trigger{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    padding:12px 10px!important;
+    white-space:nowrap!important;
+  }
+  .nav-dropdown{
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    overflow:visible!important;
+  }
+  .nav-drop-trigger .drop-mark{
+    flex:0 0 20px!important;
+    width:20px!important;
+    height:20px!important;
+    margin-left:8px!important;
+  }
+  .nav-menu{
+    position:static!important;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    transform:none!important;
+    width:min(300px,100%)!important;
+    max-width:100%!important;
+    margin:8px auto 0!important;
+    padding:8px!important;
+    display:grid!important;
+    gap:8px!important;
+    overflow:hidden!important;
+  }
+  .nav-menu a{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    display:grid!important;
+    grid-template-columns:42px minmax(0,1fr)!important;
+    align-items:center!important;
+    justify-content:stretch!important;
+    column-gap:12px!important;
+    padding:10px!important;
+    text-align:left!important;
+  }
+  .nav-menu img{
+    width:42px!important;
+    height:42px!important;
+    justify-self:center!important;
+  }
+  .nav-menu b,
+  .nav-menu small{
+    text-align:left!important;
+    min-width:0!important;
+    overflow:hidden!important;
+  }
+  .nav-menu b{
+    white-space:nowrap!important;
+    text-overflow:ellipsis!important;
+  }
+  .nav-menu small{
+    white-space:normal!important;
+    line-height:1.22!important;
+  }
+}
+@media(max-width:360px){
+  .menu-open .nav{left:8px!important;right:8px!important;width:calc(100vw - 16px)!important;max-width:calc(100vw - 16px)!important;padding:12px!important;}
+  .nav-menu{width:100%!important;}
+  .nav-menu a{grid-template-columns:38px minmax(0,1fr)!important;column-gap:10px!important;padding:9px!important;}
+  .nav-menu img{width:38px!important;height:38px!important;}
+}
+
+/* Force OUR APPS trigger itself to center in mobile nav */
+@media(max-width:980px){
+  .menu-open .nav .nav-dropdown{
+    display:grid!important;
+    place-items:center!important;
+    width:100%!important;
+  }
+  .menu-open .nav .nav-dropdown > .nav-drop-trigger{
+    width:auto!important;
+    min-width:160px!important;
+    max-width:max-content!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .menu-open .nav .nav-dropdown > .nav-drop-trigger .drop-mark{
+    margin-left:8px!important;
+  }
+}
+@media(max-width:360px){
+  .menu-open .nav .nav-dropdown > .nav-drop-trigger{
+    min-width:142px!important;
+  }
+}
+
+/* Mobile apps dropdown: click-to-open, no extra trigger container */
+@media(max-width:980px){
+  .nav-dropdown{
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    padding:0!important;
+    border-radius:0!important;
+  }
+  .nav-drop-trigger{
+    background:transparent!important;
+    box-shadow:none!important;
+    border:0!important;
+  }
+  .nav-drop-trigger:hover,
+  .nav-drop-trigger:focus{
+    background:rgba(56,189,248,.08)!important;
+  }
+  .nav-dropdown .nav-menu{
+    display:none!important;
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+    transform:none!important;
+  }
+  .nav-dropdown.open .nav-menu{
+    display:grid!important;
+  }
+  .nav-dropdown.open .drop-mark{
+    transform:rotate(180deg)!important;
+    background:linear-gradient(135deg,#1d4ed8,#3b82f6)!important;
+    color:#fff!important;
+  }
+  .nav-dropdown:not(.open) .nav-menu{
+    height:0!important;
+    padding-top:0!important;
+    padding-bottom:0!important;
+    margin-top:0!important;
+    border:0!important;
+  }
+}
+
+/* Remove mobile nav-dropdown grid wrapper; keep clean click dropdown */
+@media(max-width:980px){
+  .menu-open .nav .nav-dropdown,
+  .nav-dropdown.open{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:100%!important;
+    max-width:100%!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    padding:0!important;
+    margin:0!important;
+    border-radius:0!important;
+    overflow:visible!important;
+  }
+  .menu-open .nav .nav-dropdown > .nav-drop-trigger{
+    display:inline-flex!important;
+    width:auto!important;
+    max-width:max-content!important;
+    min-width:0!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    margin:0 auto!important;
+    padding:12px 16px!important;
+  }
+  .nav-dropdown.open .nav-menu{
+    margin-top:8px!important;
+  }
+}
+
+/* Remove unwanted light box behind OUR APPS trigger */
+@media(max-width:980px){
+  .nav-dropdown,
+  .nav-dropdown.open,
+  .menu-open .nav .nav-dropdown,
+  .nav-dropdown:hover,
+  .nav-dropdown:focus-within{
+    background:transparent!important;
+    background-color:transparent!important;
+    border:none!important;
+    box-shadow:none!important;
+    outline:none!important;
+    border-radius:0!important;
+  }
+  .nav-dropdown::before,
+  .nav-dropdown::after,
+  .nav-drop-trigger::before,
+  .nav-drop-trigger::after{
+    display:none!important;
+    content:none!important;
+    background:transparent!important;
+  }
+  .nav-drop-trigger,
+  .nav-drop-trigger:hover,
+  .nav-drop-trigger:focus,
+  .nav-dropdown.open > .nav-drop-trigger{
+    background:transparent!important;
+    background-color:transparent!important;
+    border:none!important;
+    box-shadow:none!important;
+    outline:none!important;
+    border-radius:999px!important;
+  }
+  html[data-theme="light"] .nav-dropdown,
+  html[data-theme="light"] .nav-dropdown.open,
+  html[data-theme="light"] .nav-drop-trigger,
+  html[data-theme="light"] .nav-dropdown.open > .nav-drop-trigger{
+    background:transparent!important;
+    background-color:transparent!important;
+    box-shadow:none!important;
+    border:none!important;
+  }
+}
+
+/* Final: make .nav-dropdown.open blend with mobile navbar/background */
+@media(max-width:980px){
+  html[data-theme="light"] body .header .nav .nav-dropdown.open,
+  html[data-theme="light"] body .header .nav .nav-dropdown.open:hover,
+  html[data-theme="light"] body .header .nav .nav-dropdown.open:focus-within{
+    background:transparent!important;
+    background-color:transparent!important;
+    background-image:none!important;
+    border-color:transparent!important;
+    box-shadow:none!important;
+    outline:0!important;
+  }
+  html[data-theme="light"] body .header .nav .nav-dropdown.open > .nav-drop-trigger,
+  html[data-theme="light"] body .header .nav .nav-dropdown.open > .nav-drop-trigger:hover,
+  html[data-theme="light"] body .header .nav .nav-dropdown.open > .nav-drop-trigger:focus{
+    background:transparent!important;
+    background-color:transparent!important;
+    background-image:none!important;
+    box-shadow:none!important;
+    border-color:transparent!important;
+  }
+  body .header .nav .nav-dropdown.open{
+    background:transparent!important;
+    background-color:transparent!important;
+    background-image:none!important;
+  }
+}
+
+/* Remove the extra wrapper box around OUR APPS on mobile completely */
+@media(max-width:980px){
+  .menu-open .nav .nav-dropdown,
+  .menu-open .nav .nav-dropdown.open{
+    display:contents!important;
+    background:transparent!important;
+    background-color:transparent!important;
+    background-image:none!important;
+    border:0!important;
+    box-shadow:none!important;
+    outline:0!important;
+    padding:0!important;
+    margin:0!important;
+  }
+  .menu-open .nav .nav-drop-trigger{
+    align-self:center!important;
+    justify-self:center!important;
+    width:max-content!important;
+    max-width:calc(100vw - 70px)!important;
+    margin:0 auto!important;
+    background:transparent!important;
+    background-color:transparent!important;
+    background-image:none!important;
+    border:0!important;
+    box-shadow:none!important;
+    outline:0!important;
+  }
+  .menu-open .nav .nav-menu{
+    align-self:center!important;
+    justify-self:center!important;
+    width:min(300px, calc(100vw - 56px))!important;
+    max-width:calc(100vw - 56px)!important;
+    margin:8px auto 0!important;
+  }
+}
