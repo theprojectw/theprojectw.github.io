@@ -69,7 +69,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body style="--app-accent:#00ef86">
-  <div class="loader"><div class="loader-inner"><img src="assets/projectw-single-mark.svg" alt="ProjectW" width="512" height="512"><div class="loader-line"><span></span></div><p>loading ChargeGuard</p></div></div>
+  <div class="loader"><div class="loader-inner"><img src="assets/chargeguard-logo.svg" alt="ProjectW" width="512" height="512"><div class="loader-line"><span></span></div><p>loading ChargeGuard</p></div></div>
   <canvas id="mesh" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div><div class="cursor" aria-hidden="true"></div>
   <header class="header">
     <a href="index.html#top" class="brand brand-split" aria-label="ProjectW home"><img class="brand-icon" src="assets/projectw-logo.svg" alt="" width="512" height="512"><img class="brand-word" src="assets/projectw-wordmark.svg" alt="ProjectW" width="400" height="92"></a>
@@ -103,21 +103,6 @@
         <div class="detail-device depth-card"><img src="assets/chargeguard-logo.svg" alt="ChargeGuard logo" width="512" height="512"></div>
       </div>
     </section>
-    <section id="features" class="detail-section">
-      <div class="detail-section-head"><p class="kicker">Feature architecture</p><h2>Built like a product, presented like a premium launch.</h2><p>ChargeGuard is built with its own feature set, technical workflow, and product story while staying connected to ProjectW.</p></div>
-      <div class="detail-grid"><article class="detail-card depth-card"><b>01</b><h3>Target Cutoff Protection</h3><p>Arm custom charging limits at 80%, 85%, 90%, 95%, or 100% for healthier lithium-ion battery cycles.</p></article><article class="detail-card depth-card"><b>02</b><h3>Live Wattage Engine</h3><p>Visualize mA flow, wattage, temperature, and charging behavior inside smooth diagnostic graphics.</p></article><article class="detail-card depth-card"><b>03</b><h3>Thermal Momentum</h3><p>Detect abnormal heat rise early and warn users before throttling or battery stress gets worse.</p></article><article class="detail-card depth-card"><b>04</b><h3>TTS + Alarm System</h3><p>Loud continuous alarms, torch alerts, and spoken guidance when the device reaches its selected threshold.</p></article><article class="detail-card depth-card"><b>05</b><h3>Root Silicon Cutoff</h3><p>Architecture prepared for rooted/Magisk power users who want deeper PMIC-level control.</p></article><article class="detail-card depth-card"><b>06</b><h3>Session Repository</h3><p>Track charging history, peak temperatures, average wattage, and lifetime recharge insights.</p></article></div>
-    </section>
-    <section class="detail-section">
-      <div class="flow-panel depth-card">
-        <div><p class="kicker">How it works</p><h2 class="detail-title" style="font-size:clamp(36px,4vw,58px)">A clear technical flow users can trust.</h2><div class="flow-list"><div><b>01</b><span><h3>Plug in</h3><p>PowerConnectionReceiver detects USB, AC fast charging, or wireless charging instantly.</p></span></div><div><b>02</b><span><h3>Monitor</h3><p>WorkManager activates the watchdog only while charging, staying dormant when unplugged.</p></span></div><div><b>03</b><span><h3>Analyze</h3><p>The dashboard samples wattage, current, temperature, and trend momentum in real time.</p></span></div><div><b>04</b><span><h3>Protect</h3><p>At the chosen target, ChargeGuard fires alarms and voice instructions to remove power.</p></span></div></div></div>
-        <div class="holo-graphic app-flow-preview">
-          <div class="screen-phone holo-screen">
-            <img class="shot-dark" src="assets/app-screens/chargeguard/dark/01.webp" width="430" height="906" loading="lazy" alt="ChargeGuard charging workflow screenshot dark mode" />
-            <img class="shot-light" src="assets/app-screens/chargeguard/light/01.webp" width="430" height="906" loading="lazy" alt="ChargeGuard charging workflow screenshot light mode" />
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="detail-section app-screenshot-gallery" style="--app-accent:#00ef86">
       <div class="detail-section-head"><p class="kicker">Real App Preview</p><h2>ChargeGuard screenshots in dark and light mode.</h2><p>These are real app screenshots with the notification/status area removed for a cleaner product presentation. The screenshots switch with the website theme.</p></div>
@@ -128,6 +113,40 @@
         <article class="screen-gallery-card"><div class="screen-phone"><img class="shot-dark" src="assets/app-screens/chargeguard/dark/04.webp" width="430" height="906" loading="lazy" alt="ChargeGuard dark mode screenshot 4" /><img class="shot-light" src="assets/app-screens/chargeguard/light/04.webp" width="430" height="906" loading="lazy" alt="ChargeGuard light mode screenshot 4" /></div><span>Settings and controls</span></article>
       </div>
     </section>
+
+    <section class="detail-section download-trust-section">
+      <div class="download-panel depth-card">
+        <div>
+          <p class="kicker">Official APK</p>
+          <h2>ChargeGuard download information.</h2>
+          <p>Battery protection and charging monitor distributed through the official ProjectW website.</p>
+          <div class="download-actions"><a class="btn primary magnetic" href="apks/ChargeGuard.apk" download aria-label="Download ChargeGuard APK">Download APK</a><a class="btn secondary magnetic" href="security.html">Security Notes</a></div>
+        </div>
+        <div class="download-meta">
+          <div><b>Version</b><span>Stable v1.0.0</span></div>
+          <div><b>Platform</b><span>Android 7.0+</span></div>
+          <div><b>Source</b><span>Official ProjectW website</span></div>
+          <div><b>SHA-256</b><code>ADD_SHA256_FOR_CHARGEGUARD_APK</code></div>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="detail-section">
+      <div class="detail-section-head"><p class="kicker">Feature architecture</p><h2>Built like a product, presented like a premium launch.</h2><p>ChargeGuard is built with its own feature set, technical workflow, and product story while staying connected to ProjectW.</p></div>
+      <div class="detail-grid"><article class="detail-card depth-card"><b>01</b><h3>Target Cutoff Protection</h3><p>Arm custom charging limits at 80%, 85%, 90%, 95%, or 100% for healthier lithium-ion battery cycles.</p></article><article class="detail-card depth-card"><b>02</b><h3>Live Wattage Engine</h3><p>Visualize mA flow, wattage, temperature, and charging behavior inside smooth diagnostic graphics.</p></article><article class="detail-card depth-card"><b>03</b><h3>Thermal Momentum</h3><p>Detect abnormal heat rise early and warn users before throttling or battery stress gets worse.</p></article><article class="detail-card depth-card"><b>04</b><h3>TTS + Alarm System</h3><p>Loud continuous alarms, torch alerts, and spoken guidance when the device reaches its selected threshold.</p></article><article class="detail-card depth-card"><b>05</b><h3>Root Silicon Cutoff</h3><p>Architecture prepared for rooted/Magisk power users who want deeper PMIC-level control.</p></article><article class="detail-card depth-card"><b>06</b><h3>Session Repository</h3><p>Track charging history, peak temperatures, average wattage, and lifetime recharge insights.</p></article></div>
+    </section>
+    <section class="detail-section">
+      <div class="flow-panel depth-card">
+        <div><p class="kicker">How it works</p><h2 class="detail-title" style="font-size:clamp(36px,4vw,58px)">A clear technical flow users can trust.</h2><div class="flow-list"><div><b>01</b><span><h3>Plug in</h3><p>PowerConnectionReceiver detects USB, AC fast charging, or wireless charging instantly.</p></span></div><div><b>02</b><span><h3>Monitor</h3><p>WorkManager activates the watchdog only while charging, staying dormant when unplugged.</p></span></div><div><b>03</b><span><h3>Analyze</h3><p>The dashboard samples wattage, current, temperature, and trend momentum in real time.</p></span></div><div><b>04</b><span><h3>Protect</h3><p>At the chosen target, ChargeGuard fires alarms and voice instructions to remove power.</p></span></div></div></div>
+        <div class="holo-graphic app-animated-flow charge-flow-graphic">
+          <div class="device-visual voltage-visual" aria-label="ChargeGuard live voltage monitoring animation">
+            <div class="mini-phone"><span class="battery-fill"></span><em>87%</em><small>4.8V • 22W</small><i class="volt-line"></i></div>
+            <div class="monitor-chip">Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section class="detail-section">
       <div class="detail-section-head"><p class="kicker">Stack & capabilities</p><h2>Keywords, architecture, and product signals.</h2></div>
       <div class="tag-cloud"><span>Kotlin</span><span>Jetpack Compose</span><span>Material 3</span><span>WorkManager</span><span>DataStore</span><span>Battery diagnostics</span><span>Thermal alerts</span><span>Offline privacy</span></div>
@@ -158,7 +177,7 @@
     </div>
   </div>
 
-  <footer class="footer"><span>© <b id="year"></b> ProjectW. Developed by <a class="dev-link" href="mailto:wetheprojectw@gmail.com?subject=Contact%20Waqas%20from%20ProjectW%20Website">Waqas</a>.</span><span class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="index.html#top">Back home</a></span></footer>
+  <footer class="footer"><span>© <b id="year"></b> ProjectW. Developed by <a class="dev-link" href="mailto:wetheprojectw@gmail.com?subject=Contact%20Waqas%20from%20ProjectW%20Website">Waqas</a>.</span><span class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="security.html">Security</a><a href="changelog.html">Changelog</a><a href="index.html#top">Back home</a></span></footer>
   <script src="vendor/gsap.min.js" defer></script><script src="vendor/ScrollTrigger.min.js" defer></script><script src="detail-motion.js" defer></script>
 <script src="contact-widget.js" defer></script></body>
 </html>
