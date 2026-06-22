@@ -123,7 +123,7 @@
         </div>
       </div>
       <a href="about.html">ABOUT</a>
-      <a href="#contact">CONTACT US</a>
+      <a href="contact.html">CONTACT US</a>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle magnetic" type="button" aria-label="Switch to light mode" aria-pressed="false">
@@ -228,18 +228,26 @@
       </div>
     </section>
 
-    <section class="section-plus problem-solution" id="problems">
-      <div class="section-copy center">
-        <p class="kicker">Problem → Solution</p>
-        <h2 class="split-lines">ProjectW apps solve specific Android problems.</h2>
-        <p>Every product starts with a real inconvenience, then turns it into a clean Android workflow.</p>
-      </div>
-      <div class="ps-grid">
-        <article class="ps-card depth-card" style="--app-accent:#00ef86"><img src="assets/chargeguard-logo.svg" alt="ChargeGuard" width="512" height="512"><span>Problem</span><h3>Fast charging and heat silently reduce battery lifespan.</h3><span>Solution</span><p>ChargeGuard monitors charging sessions, target cutoff levels, live wattage, and thermal momentum to help users unplug at the right time.</p><a class="btn secondary" href="chargeguard.html">View ChargeGuard</a></article>
-        <article class="ps-card depth-card" style="--app-accent:#7c5cff"><img src="assets/qrcraft-logo.svg" alt="QRcraft" width="512" height="512"><span>Problem</span><h3>Most QR apps are basic, unsafe, and weak for creation.</h3><span>Solution</span><p>QRcraft combines scanning, URL safety checks, QR generation, customization, history, and export-ready QR assets.</p><a class="btn secondary" href="qrcraft.html">View QRcraft</a></article>
-        <article class="ps-card depth-card" style="--app-accent:#438afe"><img src="assets/relayotp-logo.svg" alt="RelayOTP" width="512" height="512"><span>Problem</span><h3>OTP arrives on one phone while apps are used on another.</h3><span>Solution</span><p>RelayOTP securely relays OTP codes between your own paired devices using QR pairing and encryption-first transport.</p><a class="btn secondary" href="relayotp.html">View RelayOTP</a></article>
+    <section class="section-plus featured-relay-section" style="--app-accent:#438afe">
+      <div class="featured-relay-card depth-card">
+        <div class="featured-copy">
+          <p class="kicker">Featured App</p>
+          <h2 class="split-lines">RelayOTP — secure OTP flow for your own paired phones.</h2>
+          <p>RelayOTP is built for users who keep a SIM in one phone and banking or daily apps on another. Pair devices with QR, relay OTPs securely, and keep the workflow controlled.</p>
+          <div class="feature-badges"><span>AES-256-GCM</span><span>RSA-2048 pairing</span><span>Android 8.0+</span><span>Own devices only</span></div>
+          <div class="featured-actions"><a class="btn primary magnetic" href="relayotp.html">Explore RelayOTP</a><a class="btn secondary magnetic" href="apks/RelayOTP.apk" download aria-label="Download RelayOTP APK">Download APK</a></div>
+        </div>
+        <div class="featured-visual">
+          <div class="relay-sync-showcase">
+            <div class="sync-phone big left"><small>Sender</small><em>OTP</em></div>
+            <div class="sync-arc big"><i></i><i></i><i></i></div>
+            <div class="sync-phone big right"><small>Receiver</small><em>482 913</em></div>
+          </div>
+        </div>
       </div>
     </section>
+
+
 
     <section class="section-plus trust-section" id="trust">
       <div class="trust-panel depth-card">
@@ -256,17 +264,10 @@
       </div>
     </section>
 
-    <section class="section-plus badges-section">
-      <div class="section-copy center">
-        <p class="kicker">Product Status</p>
-        <h2 class="split-lines">Clear app signals before users install.</h2>
-      </div>
-      <div class="status-grid">
-        <article><img src="assets/chargeguard-logo.svg" alt="ChargeGuard" width="512" height="512"><h3>ChargeGuard</h3><div><span>Android 7.0+</span><span>Target cutoff</span><span>Thermal alerts</span><span>Offline-first</span></div><a class="btn primary" href="apks/ChargeGuard.apk" download aria-label="Download ChargeGuard APK">Download APK</a></article>
-        <article><img src="assets/qrcraft-logo.svg" alt="QRcraft" width="512" height="512"><h3>QRcraft</h3><div><span>Android 7.0+</span><span>QR scanner</span><span>QR generator</span><span>PNG / SVG / PDF</span></div><a class="btn primary" href="apks/QRcraft.apk" download aria-label="Download QRcraft APK">Download APK</a></article>
-        <article><img src="assets/relayotp-logo.svg" alt="RelayOTP" width="512" height="512"><h3>RelayOTP</h3><div><span>Android 8.0+</span><span>AES-256</span><span>RSA-2048</span><span>QR pairing</span></div><a class="btn primary" href="apks/RelayOTP.apk" download aria-label="Download RelayOTP APK">Download APK</a></article>
-      </div>
-    </section>
+
+
+
+
 
     <section class="section-plus founder-section" id="founder">
       <div class="founder-card depth-card">
@@ -280,77 +281,18 @@
       </div>
     </section>
 
-    <section class="section-plus mockups-section">
-      <div class="section-copy center">
-        <p class="kicker">App Experience Preview</p>
-        <h2 class="split-lines">Product flows at a glance.</h2>
-        <p>Lightweight visual previews show what each app is designed to handle.</p>
-      </div>
-      <div class="mockup-grid">
-        <article class="mock-phone charge-preview"><img src="assets/chargeguard-logo.svg" alt="ChargeGuard" width="512" height="512"><b>ChargeGuard Dashboard</b><div class="device-visual voltage-visual" aria-label="Phone voltage monitoring visual"><div class="mini-phone"><span class="battery-fill"></span><em>87%</em><small>4.8V • 22W</small><i class="volt-line"></i></div><div class="monitor-chip">Monitoring</div></div><p>Battery level, wattage, cutoff target, and thermal warnings.</p></article>
-        <article class="mock-phone qr-preview"><img src="assets/qrcraft-logo.svg" alt="QRcraft" width="512" height="512"><b>QRcraft Studio</b><div class="device-visual qr-visual" aria-label="Mobile QR scanning visual"><div class="mini-phone"><img class="projectw-qr" src="assets/projectw-qr.svg" alt="QR code for The ProjectW" width="512" height="512"><i class="scan-beam"></i><small>Safe scan ready</small></div></div><p>Scan results, QR generation, presets, history, and export.</p></article>
-        <article class="mock-phone relay-preview"><img src="assets/relayotp-logo.svg" alt="RelayOTP" width="512" height="512"><b>RelayOTP Pairing</b><div class="device-visual sync-visual" aria-label="Two mobile OTP sync visual"><div class="sync-phone left"><small>Sender</small><em>OTP</em></div><div class="sync-arc"><i></i><i></i><i></i></div><div class="sync-phone right"><small>Receiver</small><em>482 913</em></div></div><p>Sender/receiver mode, QR pairing, and encrypted delivery.</p></article>
-      </div>
-    </section>
-
-    <section class="section-plus real-screens-section">
-      <div class="section-copy center">
-        <p class="kicker">Real App Screenshots</p>
-        <h2 class="split-lines">Actual app screens, matched to your theme.</h2>
-        <p>These are real ProjectW app previews. Dark mode shows dark screenshots and light mode automatically switches to light screenshots.</p>
-      </div>
-      <div class="real-screen-grid">
-        <article class="real-screen-card" style="--app-accent:#00ef86"><div class="screen-phone"><img class="shot-dark" src="assets/app-screens/chargeguard/dark/02.webp" width="430" height="906" loading="lazy" alt="ChargeGuard dark mode app screenshot" /><img class="shot-light" src="assets/app-screens/chargeguard/light/02.webp" width="430" height="906" loading="lazy" alt="ChargeGuard light mode app screenshot" /></div><h3>ChargeGuard</h3><p>Charging dashboard, live stats, cutoff and thermal monitoring.</p></article>
-        <article class="real-screen-card" style="--app-accent:#7c5cff"><div class="screen-phone"><img class="shot-dark" src="assets/app-screens/qrcraft/dark/02.webp" width="430" height="906" loading="lazy" alt="QRcraft dark mode scanner screenshot" /><img class="shot-light" src="assets/app-screens/qrcraft/light/02.webp" width="430" height="906" loading="lazy" alt="QRcraft light mode scanner screenshot" /></div><h3>QRcraft</h3><p>Scanner, gallery/file scanning, QR tools and quick actions.</p></article>
-        <article class="real-screen-card" style="--app-accent:#438afe"><div class="screen-phone"><img class="shot-dark" src="assets/app-screens/relayotp/dark/01.webp" width="430" height="906" loading="lazy" alt="RelayOTP dark mode main landing screen with SIM menu" /><img class="shot-light" src="assets/app-screens/relayotp/light/01.webp" width="430" height="906" loading="lazy" alt="RelayOTP light mode main landing screen with SIM menu" /></div><h3>RelayOTP</h3><p>Pairing, sender/receiver workflow and secure OTP relay controls.</p></article>
-      </div>
-    </section>
-
-
-    <section class="section-plus roadmap-section">
-      <div class="roadmap-panel depth-card">
-        <div>
-          <p class="kicker">Roadmap</p>
-          <h2 class="split-lines">ProjectW is built to keep improving.</h2>
-          <p>These are the next product directions planned for the ProjectW ecosystem.</p>
-        </div>
-        <div class="roadmap-list">
-          <div><b>01</b><span>APK and Play Store release links</span></div>
-          <div><b>02</b><span>More Android utility products under ProjectW</span></div>
-          <div><b>03</b><span>Better widgets, backups, and export workflows</span></div>
-          <div><b>04</b><span>User feedback program and support improvements</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features panel">
-      <div class="section-copy center">
-        <p class="kicker">Company principles</p>
-        <h2 class="split-lines">What ProjectW stands for.</h2>
-      </div>
-      <div class="feature-grid">
-        <article><b>01</b><h3>Purpose-built apps</h3><p>Every ProjectW product starts from a real user problem, then turns it into a focused Android utility with a clear workflow.</p></article>
-        <article><b>02</b><h3>Privacy-aware engineering</h3><p>Local-first storage where possible, encrypted transport where needed, and transparent product messaging for user trust.</p></article>
-        <article><b>03</b><h3>Android reliability</h3><p>Kotlin-based product thinking with background reliability, device compatibility, clean state handling, and practical architecture.</p></article>
-        <article><b>04</b><h3>Support by ProjectW</h3><p>For support, feedback, APK access, or collaboration, contact ProjectW at wetheprojectw@gmail.com.</p></article>
-      </div>
-    </section>
 
 
 
-    <section class="section-plus apk-install-guide">
-      <div class="section-copy center">
-        <p class="kicker">APK Install Guide</p>
-        <h2 class="split-lines">Install ProjectW apps safely.</h2>
-        <p>Download APKs only from the official ProjectW website and follow Android's install prompts carefully.</p>
-      </div>
-      <div class="install-steps">
-        <article><b>01</b><h3>Download APK</h3><p>Choose ChargeGuard, QRcraft, or RelayOTP from the official ProjectW download buttons.</p></article>
-        <article><b>02</b><h3>Open file</h3><p>Tap the downloaded APK file from your browser or file manager.</p></article>
-        <article><b>03</b><h3>Allow install</h3><p>If Android asks, allow install from your browser or file manager source.</p></article>
-        <article><b>04</b><h3>Use responsibly</h3><p>Only install official ProjectW APKs and use apps within their intended purpose.</p></article>
-      </div>
-    </section>
+
+
+
+
+
+
+
+
+
 
     <section id="company-faq" class="features panel company-faq">
       <div class="section-copy center">
@@ -365,28 +307,9 @@
       </div>
     </section>
 
-    <section id="contact" class="finale panel">
-      <div class="finale-card depth-card">
-        <img src="assets/projectw-lockup-asset.svg" alt="ProjectW full logo" width="900" height="220">
-        <p class="kicker">Contact ProjectW</p>
-        <h2 class="split-lines">Support, product access, and ProjectW contact.</h2>
-        <p>For support, app access, collaboration, or product questions, contact ProjectW directly.</p>
-        <form class="contact-mail-form">
-          <div class="contact-form-row">
-            <label>Name<input name="name" type="text" placeholder="Your name" required></label>
-            <label>Email<input name="email" type="email" placeholder="you@example.com" required></label>
-          </div>
-          <label>Message<textarea name="message" rows="4" placeholder="Tell ProjectW what you need..." required></textarea></label>
-          <button class="btn primary magnetic" type="submit">Send Message</button>
-        </form>
-        <div class="contact-actions">
-          <a class="btn secondary magnetic" href="mailto:wetheprojectw@gmail.com?subject=ProjectW%20Support">Support</a>
-          <a class="btn secondary magnetic" href="mailto:wetheprojectw@gmail.com?subject=Request%20APK%20Access">Request APK</a>
-          <a class="btn secondary magnetic" href="mailto:wetheprojectw@gmail.com?subject=ProjectW%20Collaboration">Collaboration</a>
-        </div>
-        <a class="contact-email" href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a>
-      </div>
-    </section>
+
+
+
   </main>
 
   
@@ -408,7 +331,7 @@
 
   <footer class="footer">
     <span>© <b id="year"></b> ProjectW. Developed by <a class="dev-link" href="mailto:wetheprojectw@gmail.com?subject=Contact%20Waqas%20from%20ProjectW%20Website">Waqas</a>.</span>
-    <span class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="security.html">Security</a><a href="changelog.html">Changelog</a><a href="#top">Back to top</a></span>
+    <span class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="contact.html">Contact</a><a href="security.html">Security</a><a href="changelog.html">Changelog</a><a href="#top">Back to top</a></span>
   </footer>
 
   <script src="vendor/gsap.min.js" defer></script>
