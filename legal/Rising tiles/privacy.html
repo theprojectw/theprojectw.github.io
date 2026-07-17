@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Rising Tiles</title>
+<meta name="description" content="Privacy policy for Rising Tiles by ProjectW (com.projectw.rt) — what data the game collects, why, and your rights over it." />
+<style>
+  :root {
+    --bg: #0F1A2E;
+    --card: #172236;
+    --ink: #EAF2FF;
+    --muted: #9AA6BC;
+    --accent: #FFC94A;
+    --stroke: #24314A;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    padding: 40px 20px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--card);
+    padding: 40px 44px;
+    border-radius: 14px;
+    border: 1px solid var(--stroke);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 30px;
+    color: var(--accent);
+    letter-spacing: 0.4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 8px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 32px;
+  }
+  h2 {
+    font-size: 16px;
+    color: var(--accent);
+    margin: 34px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--stroke);
+  }
+  p { margin: 10px 0; }
+  ul { margin: 10px 0 10px 22px; padding: 0; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  a:hover { text-decoration: underline; }
+  .footer {
+    margin: 40px auto 0;
+    max-width: 780px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .footer a { color: var(--muted); }
+  @media (max-width: 600px) {
+    body { padding: 20px 12px; }
+    .card { padding: 24px 20px; }
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Rising Tiles &middot; a ProjectW game &middot; com.projectw.rt</p>
+  <p class="meta">Last updated: <strong>July 17, 2026</strong> &middot; Contact: <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a></p>
+
+  <h2>Introduction</h2>
+  <p>Rising Tiles is developed by ProjectW (Waqas). This policy explains what data the game collects, why, and your rights over it. It reflects the actual behavior of the app; if we change what we collect, this page gets updated first.</p>
+
+  <h2>Data we store only on your device</h2>
+  <p>The game stores the following locally using Android's SharedPreferences. This data never leaves your device unless you sign in (see next section) or opt into cloud save:</p>
+  <ul>
+    <li>Best score, best combo, total games played</li>
+    <li>Gem balance (in-game currency)</li>
+    <li>Selected menu theme, tile skin, effect pack, gameplay background</li>
+    <li>Unlocked skins list</li>
+    <li>Daily missions progress, daily streak, achievements</li>
+    <li>Tutorial completion state</li>
+    <li>Music, SFX, and haptics on/off settings</li>
+    <li>Graphics quality preference</li>
+  </ul>
+  <p>Uninstalling the app removes all of this. Clearing the app's storage in Android Settings has the same effect.</p>
+
+  <h2>Data we sync to Google Firebase (only if you sign in)</h2>
+  <p>Signing in with Google is <strong>optional</strong>. If you tap "Play Offline" on the welcome screen, nothing in this section is sent anywhere.</p>
+  <p>If you sign in, the following is synced to Firebase Firestore so your progress survives reinstalls and you can appear on the online leaderboard:</p>
+  <ul>
+    <li>Your chosen username</li>
+    <li>Your country code (auto-detected from device locale; you can edit or clear it)</li>
+    <li>Your best score (for the global and country leaderboards)</li>
+    <li>Your Firebase user ID — a random string, not your email</li>
+  </ul>
+  <p>Your email address is used only by Google to authenticate you. Rising Tiles never sees, reads, or stores your email.</p>
+
+  <h2>Analytics and crash reports</h2>
+  <p>We use Firebase Analytics and Firebase Crashlytics to understand which features get used and to fix bugs when the app crashes. These services collect:</p>
+  <ul>
+    <li>Anonymous device model and Android version</li>
+    <li>Session duration and screen visits</li>
+    <li>Non-personal event names (e.g. <code>game_over</code>, <code>perfect_drop</code>, <code>theme_changed</code>)</li>
+    <li>Crash stack traces if the app crashes</li>
+  </ul>
+  <p>Nothing in this data identifies you personally. You can disable it entirely by clearing app data in Android Settings, or by uninstalling the app.</p>
+
+  <h2>Ads (Google AdMob)</h2>
+  <p>The game shows two ad formats:</p>
+  <ul>
+    <li><strong>Rewarded ads</strong> — you explicitly tap "Watch ad for diamonds" and can back out at any time.</li>
+    <li><strong>Rewarded interstitial ads</strong> — shown at most once every 7 games, always with a "skip" option and a reward for watching (extra gems).</li>
+  </ul>
+  <p>Google AdMob may collect an anonymous <em>advertising ID</em> from your device to serve relevant ads. You can reset this ID in Android Settings → Privacy → Ads, or opt out of personalized ads entirely.</p>
+  <p>If you are in the EU, UK, or Switzerland, we show a consent form (Google's User Messaging Platform) on first launch and ask before serving personalized ads. You can withdraw consent at any time by clearing the app's data.</p>
+
+  <h2>In-app purchases</h2>
+  <p>Rising Tiles offers optional in-app purchases for gem packs, handled entirely through Google Play Billing. We never see your payment method, card number, or billing address — Google handles all of that. We only receive an anonymous purchase confirmation token that we use to credit the gems to your account.</p>
+
+  <h2>Notifications</h2>
+  <p>We ask for the notification permission on first launch (Android 13+) so we can remind you when your daily reward is ready. That reminder runs entirely on your device via Android WorkManager — no server is involved.</p>
+  <p>We do <strong>not</strong> send push notifications from a remote server unless you explicitly opt into a friend challenge (see below).</p>
+
+  <h2>Friend challenges</h2>
+  <p>You can share your score with friends via a link you generate yourself using your device's share sheet. The link contains only your username, score, and country code. Nothing is sent from our servers to your friends — the message goes through whichever app you share via (WhatsApp, SMS, etc.).</p>
+
+  <h2>Data sharing</h2>
+  <p>We do <strong>not</strong> sell your data. We do not share it with any third parties beyond the Google services listed above (Firebase, AdMob, Play Billing), and only what those services need to function.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Rising Tiles is rated for all ages but is not directed at children under 13. We do not knowingly collect personal data from children under 13. If you believe your child has provided personal data to us, please email <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a> and we will delete it within 30 days.</p>
+
+  <h2>Your rights</h2>
+  <p>You can:</p>
+  <ul>
+    <li><strong>Delete all local data:</strong> uninstall the app, or clear app data in Android Settings → Apps → Rising Tiles → Storage → Clear.</li>
+    <li><strong>Delete cloud data:</strong> email <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a> from the account you signed in with, mentioning your username. We will remove your leaderboard row and profile document within 30 days.</li>
+    <li><strong>Opt out of personalized ads:</strong> reset or disable your advertising ID in Android Settings → Privacy → Ads, or withdraw consent via the in-app consent form (EU/UK/CH).</li>
+    <li><strong>Opt out of analytics and crash reporting:</strong> clear app data or uninstall the app.</li>
+    <li><strong>Access your data:</strong> email the address above and we will share whatever data we have on file (which will be limited to what is listed in the two "Data we..." sections above).</li>
+  </ul>
+
+  <h2>Data retention</h2>
+  <p>Local data lives on your device until you delete the app or clear its storage. Cloud data (Firestore profile + leaderboard row) is retained while your account is active. If you don't sign in for 24 months, we may delete inactive profiles to reduce storage costs.</p>
+
+  <h2>Security</h2>
+  <p>All communication with Google Firebase and AdMob uses HTTPS/TLS encryption. Sensitive local values (gem balance, best score) are stored using AndroidX EncryptedSharedPreferences to make casual tampering more difficult.</p>
+
+  <h2>International transfers</h2>
+  <p>Firebase and AdMob servers are operated by Google globally. By using the app you consent to your data being processed on those servers, which may be located outside your country. Google provides standard contractual clauses and other safeguards for international transfers.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we materially change this policy, we will bump the "Last updated" date at the top and, for significant changes, show a notice inside the app. Continued use of the app after an update means you accept the revised policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, deletion requests, or complaints: <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a>.</p>
+</main>
+<p class="footer">
+  &copy; 2026 ProjectW &middot; Rising Tiles &middot; <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a>
+</p>
+</body>
+</html>
