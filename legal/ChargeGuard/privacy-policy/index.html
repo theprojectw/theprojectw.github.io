@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="ChargeGuard Privacy Policy: what the Android battery-monitoring app processes locally, its background operation, and your choices.">
+  <title>ChargeGuard Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #0b1220;
+      --card: #111c2e;
+      --card-2: #142338;
+      --text: #edf4f2;
+      --muted: #b5c4c4;
+      --line: #2a3b4c;
+      --accent: #62e6b2;
+      --accent-2: #7cc8ff;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .28);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        color-scheme: light;
+        --page: #eff5f2;
+        --card: #ffffff;
+        --card-2: #f4faf7;
+        --text: #182625;
+        --muted: #526462;
+        --line: #d6e3de;
+        --accent: #087f5b;
+        --accent-2: #176a9a;
+        --shadow: 0 24px 70px rgba(21, 54, 43, .10);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(98, 230, 178, .13), transparent 35rem),
+        radial-gradient(ellipse at 100% 12%, rgba(124, 200, 255, .10), transparent 34rem),
+        var(--page);
+      color: var(--text);
+      font: 16px/1.72 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    main { width: min(900px, calc(100% - 32px)); margin: 48px auto; }
+    .hero, article, footer { border: 1px solid var(--line); background: var(--card); box-shadow: var(--shadow); }
+    .hero {
+      position: relative; overflow: hidden; padding: clamp(28px, 6vw, 56px);
+      border-radius: 28px; background: linear-gradient(135deg, var(--card-2), var(--card));
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 220px; height: 220px; right: -78px; top: -100px;
+      border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent); border-radius: 50%;
+      box-shadow: 0 0 0 28px color-mix(in srgb, var(--accent) 7%, transparent),
+                  0 0 0 58px color-mix(in srgb, var(--accent-2) 6%, transparent);
+      pointer-events: none;
+    }
+    .eyebrow { margin: 0 0 10px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.08; letter-spacing: -.045em; }
+    .intro { max-width: 700px; margin: 18px 0 0; color: var(--muted); font-size: 1.05rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--muted); font-size: .84rem; font-weight: 650; }
+    article { margin-top: 18px; padding: clamp(22px, 5vw, 42px); border-radius: 24px; }
+    section + section { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 12px; font-size: 1.3rem; letter-spacing: -.02em; }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0 0; padding-left: 1.35rem; }
+    li { margin: 7px 0; padding-left: 3px; }
+    a { color: var(--accent-2); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    strong { color: var(--text); }
+    .callout { margin: 18px 0 0; padding: 14px 16px; border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--line)); border-radius: 14px; background: color-mix(in srgb, var(--accent) 8%, var(--card)); }
+    footer { margin-top: 18px; padding: 18px 22px; border-radius: 18px; color: var(--muted); font-size: .88rem; text-align: center; }
+    @media (max-width: 520px) { main { width: min(100% - 20px, 900px); margin: 20px auto; } .hero, article { border-radius: 20px; } }
+    @media print {
+      :root { color-scheme: light; --page: #fff; --card: #fff; --card-2: #fff; --text: #111; --muted: #444; --line: #bbb; --accent: #075; --accent-2: #145d85; --shadow: none; }
+      body { background: #fff; } main { width: 100%; margin: 0; }
+      .hero, article, footer { box-shadow: none; break-inside: avoid; } .hero::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">ChargeGuard · Privacy Policy</p>
+      <h1>Privacy Policy</h1>
+      <p class="intro">This notice explains how ChargeGuard handles battery information, settings, alarms, charging history, and background monitoring on Android.</p>
+      <div class="meta" aria-label="Policy details">
+        <span class="chip">Effective November 17, 2026</span>
+        <span class="chip">App version 1.6.5</span>
+        <span class="chip">com.projectw.chargeguard</span>
+      </div>
+    </header>
+
+    <article>
+      <section aria-labelledby="overview">
+        <h2 id="overview">1. Overview and responsible developer</h2>
+        <p>ChargeGuard is an Android battery-monitoring utility. During ordinary app operation, battery information and app settings are processed on your device. ChargeGuard does not send battery telemetry, settings, or charging history to a developer-operated server. The app does not create user accounts.</p>
+        <p><strong>Developer / privacy contact:</strong> ProjectW (Waqas). Email: <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a>.</p>
+        <p class="callout"><strong>Important:</strong> “Local processing” does not mean zero battery use. Background monitoring uses some device power while active; actual use varies by phone, Android version, settings, and how long monitoring is enabled.</p>
+      </section>
+
+      <section aria-labelledby="local-data">
+        <h2 id="local-data">2. Information processed on your device</h2>
+        <ul>
+          <li><strong>Battery and charging readings:</strong> charge level and state, temperature, voltage, current, estimated charging time, charging source/power, and cycle information when Android provides it. These readings are used locally for the dashboard, widget, target-charge alerts, unplug protection, temperature warnings, and charging analysis.</li>
+          <li><strong>Settings:</strong> target charge level, monitoring and alert choices, quiet hours, schedule, theme, alarm volume, selected sound, and related preferences. They are stored in app-private Android storage using Jetpack DataStore.</li>
+          <li><strong>Charging-session history:</strong> local summaries may include start/end charge level, duration, average/maximum power, maximum temperature, and the session end condition. The app keeps at most 100 entries and removes older entries as new ones are saved.</li>
+          <li><strong>Custom alarm sound:</strong> if you choose an audio file through Android's document picker, the app stores the granted file reference and reads that file locally for alarm playback. The app does not scan your audio library.</li>
+          <li><strong>Support email:</strong> if you email us, we receive your email address and the message or attachments you choose to send. We use them to answer your request and manage follow-up. The Gmail/email service may process that correspondence under its own terms. Please do not email sensitive information.</li>
+        </ul>
+        <p>ChargeGuard does not request access to your location, contacts, microphone, or camera. The optional flashlight alert uses the device flash; it does not record images or video.</p>
+      </section>
+
+      <section aria-labelledby="background">
+        <h2 id="background">3. Background monitoring and battery use</h2>
+        <p>When monitoring is enabled and the device is charging, ChargeGuard may run an Android foreground service with an ongoing notification. It reads battery state in the background to provide the monitoring and alerts you enabled. If an unplug alarm is triggered, the service can remain active while that alarm is sounding; when monitoring is no longer needed and no alarm is active, the service stops to reduce idle use.</p>
+        <p>If you enable low-battery alerts, Android WorkManager schedules periodic checks. Android controls when background work runs and may defer it. Widgets also refresh periodically. These checks are not a promise of continuous second-by-second monitoring while the phone is unplugged.</p>
+        <p><strong>Reliability and power:</strong> continuous monitoring cannot use literally zero energy. ChargeGuard is designed to limit idle activity, but power consumption is nonzero while monitoring is active. Android, battery-saver settings, manufacturer background restrictions, denied permissions, a force-stop, a powered-off device, or other system conditions may delay or prevent background work. Therefore ChargeGuard cannot guarantee uninterrupted operation on every device or launcher. Keep monitoring enabled and allow the required notifications/background operation for the best chance of timely alerts.</p>
+      </section>
+
+      <section aria-labelledby="permissions">
+        <h2 id="permissions">4. Android permissions and system features</h2>
+        <ul>
+          <li><strong>POST_NOTIFICATIONS:</strong> show the ongoing monitoring notification and alerts where Android requires notification permission.</li>
+          <li><strong>FOREGROUND_SERVICE and FOREGROUND_SERVICE_SPECIAL_USE:</strong> run the user-enabled monitoring service with an ongoing notification while the service is needed.</li>
+          <li><strong>VIBRATE and WAKE_LOCK:</strong> support vibration and audible alerts when the screen is off.</li>
+          <li><strong>RECEIVE_BOOT_COMPLETED:</strong> restore eligible monitoring listeners and scheduled checks after restart, subject to your settings and Android restrictions.</li>
+          <li><strong>Android system document picker:</strong> lets you choose an alarm sound or a destination for an optional CSV export. Exports are saved to the location you select; the app does not request broad storage access.</li>
+          <li><strong>Optional camera-flash hardware feature:</strong> can flash a light alert when enabled. No camera permission is requested and no camera recording occurs.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="sharing">
+        <h2 id="sharing">5. Network, sharing, and third parties</h2>
+        <ul>
+          <li>The app does not request the Android Internet permission and does not upload app telemetry or local history to a ChargeGuard server.</li>
+          <li>The current app source does not include advertising or analytics features. We do not sell or rent your app data.</li>
+          <li>Android provides system services used for notifications, battery readings, background scheduling, and the file picker. These platform services are governed by their providers' own terms and privacy notices.</li>
+          <li>If you email support, your message is handled by your email provider and the provider of the support mailbox. Email may be stored or routed outside your country under those providers' terms.</li>
+          <li>If you export a CSV, the file is written to the destination you select. That destination and any later sharing are under your control.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="legal-basis">
+        <h2 id="legal-basis">6. Legal basis where required</h2>
+        <p>Where the GDPR applies, the intended legal basis for local battery readings and settings that are necessary to provide the ChargeGuard features you request is performance of the service/contract (GDPR Article 6(1)(b)). For optional features where consent is the appropriate legal basis, we rely on your consent (Article 6(1)(a)); you can withdraw it by disabling the feature or permission, without affecting earlier processing. Support correspondence is used to answer your request. ChargeGuard does not use battery information for advertising or profiling.</p>
+        <p>For users in the European Economic Area or United Kingdom, you may also complain to the data-protection supervisory authority in the place where you live, work, or believe an infringement occurred.</p>
+      </section>
+
+      <section aria-labelledby="retention">
+        <h2 id="retention">7. Retention, security, and deletion</h2>
+        <p>App settings remain in app-private storage until you change or reset them or uninstall ChargeGuard. Charging history is stored locally, capped at 100 entries, and can be cleared from the app. Custom-sound access remains only while the saved file permission is available. Android backup and device-transfer rules exclude the app's settings and DataStore history.</p>
+        <p>Local app data is kept within Android's app-private storage. No copy of battery telemetry or app history is kept on a ChargeGuard server. Protecting the device itself with Android screen-lock and security settings helps protect locally stored information. We do not claim that the app independently encrypts these local files.</p>
+        <p>Support emails are retained in the support mailbox only as long as needed to reply and handle follow-up, unless a longer period is required by law. You can request deletion of a support conversation by emailing us.</p>
+      </section>
+
+      <section aria-labelledby="rights">
+        <h2 id="rights">8. Your choices and privacy rights</h2>
+        <p>You can turn monitoring and optional alerts on or off in the app, change or clear settings, clear session history, revoke Android permissions in system settings, or uninstall the app. Because battery readings and settings are stored locally and are not available to us remotely, you manage or delete that app data on your device.</p>
+        <p>Depending on your location and applicable law, you may also have rights to request access, correction, deletion, restriction, or portability of personal data, to object to certain processing, or to withdraw consent where processing relies on consent. Contact <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a> for privacy questions or requests. These rights are subject to applicable law.</p>
+      </section>
+
+      <section aria-labelledby="children">
+        <h2 id="children">9. Children's privacy</h2>
+        <p>ChargeGuard is a general-purpose battery utility and is not designed to collect personal information from children. The app does not create child accounts or send children's battery information to us.</p>
+      </section>
+
+      <section aria-labelledby="changes">
+        <h2 id="changes">10. Changes to this policy</h2>
+        <p>If the app's data practices change, this policy will be updated. The effective date at the top of this page identifies the current revision.</p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">11. Contact the developer</h2>
+        <p><strong>ProjectW (Waqas)</strong><br>
+          Email: <a href="mailto:wetheprojectw@gmail.com">wetheprojectw@gmail.com</a></p>
+      </section>
+    </article>
+
+    <footer>ChargeGuard Privacy Policy · v1.6.5 · com.projectw.chargeguard</footer>
+  </main>
+</body>
+</html>
